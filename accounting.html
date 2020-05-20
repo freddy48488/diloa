@@ -1,0 +1,64 @@
+<html>
+    <style type="text/css">
+        p{
+            color: white;
+        }
+    </style>
+    <head>
+    <form action="/accounting" method="POST">
+    <script type="text/javascript">
+        function calculate(){
+            var getnum1 = parseFloat(document.getElementById("plan1").value)
+            var getnum2 = parseFloat(document.getElementById("plan2").value)
+            var getnum3 = parseFloat(document.getElementById("plan3").value)
+            var getnum4 = parseFloat(document.getElementById("plan4").value)
+            var num1 = getnum1 *= 6000
+            var num2 = getnum2 *= 5000
+            var num3 = getnum3 *= 3000
+            var num4 = getnum4 *= 2000
+            if(isNaN(num1)) num1 = 0
+            if(isNaN(num2)) num2 = 0
+            if(isNaN(num3)) num3 = 0
+            if(isNaN(num4)) num4 = 0
+            document.getElementById("answer").value = num1 + num2 + num3 + num4
+        }
+        function calculate1(){
+            var getnum1 = parseFloat(document.getElementById("plan1").value)
+            var getnum2 = parseFloat(document.getElementById("plan2").value)
+            var getnum3 = parseFloat(document.getElementById("plan3").value)
+            var getnum4 = parseFloat(document.getElementById("plan4").value)
+            var getnum5 = parseFloat(document.getElementById("rmb").value)
+            var num1 = getnum1 *= 6000
+            var num2 = getnum2 *= 5000
+            var num3 = getnum3 *= 3000
+            var num4 = getnum4 *= 2000
+            if(isNaN(num1)) num1 = 0
+            if(isNaN(num2)) num2 = 0
+            if(isNaN(num3)) num3 = 0
+            if(isNaN(num4)) num4 = 0
+            var result = num1 + num2 + num3 + num4
+            document.getElementById("answer1").value = result * getnum5
+        }
+    </script>
+    <script type="text/javascript">
+        function goback(){
+            window.location.href ='http://localhost:8080/'
+        }
+    </script>
+    </head>
+    <body style="background-color: rgb(14, 0, 65);">
+        <p>拿卡日期(月/日/年): <input type="text" name="takedate" id="takedate" placeholder="拿卡日期"></p>
+        <p>開卡日期(月/日/年): <input type="text" name="dateactive" id="dateactive" placeholder="開卡日期"></p>
+        <p>方案: <input type="text" name="plan" id="plan" placeholder="方案"></p>
+        <p>6000 x <input type="text" id="plan1" name="plan1" placeholder="卡片數量"></p>
+        <p>5000 x <input type="text" id="plan2" name="plan2" placeholder="卡片數量"></p>
+        <p>3000 x <input type="text" id="plan3" name="plan3" placeholder="卡片數量"></p>
+        <p>2000 x <input type="text" id="plan4" name="plan4" placeholder="卡片數量"></p>
+        <p>人民幣匯率: <input type="text" id="rmb" name="rmb" placeholder="人民幣匯率"></p>
+        <p>NTD: <input type="text" id="answer">  <input type="Button" onclick="calculate()" value="計算"></p>
+        <p>RMB: <input type="text" id="answer1">  <input type="Button" onclick="calculate1()" value="計算(人民幣)"></p>
+        <button type="submit">提交</button>&nbsp;
+        <input type="button" onclick="goback()" value="回到功能選擇">
+    </form>
+    </body>
+</html>

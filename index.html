@@ -1,0 +1,41 @@
+<html>
+    <style type="text/css">
+        header{
+            background-color: white;
+            background-size: 20px;
+            font-size: 50px;
+            text-align: center;
+            font-weight: bold;
+        }
+        input[type=button] {
+            background-color: darkgoldenrod;
+            border: black;
+            display: ruby;
+            font-size: 35px;
+            font-weight: bold;
+            height: 4.5cm;
+            width: 8cm;
+        }
+    </style>
+    <form action="/" method="POST">
+        <header>
+            功能
+        </header>
+        <body style="background-color: rgb(9, 9, 66);">
+            <input style="margin-left: 625px; margin-top: 50px;" type="button" onclick="add()" value="新增資料/更新資料">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" onclick="search()" value="搜尋卡號">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" onclick="accounting()" value="帳務報表">&nbsp;&nbsp;&nbsp;&nbsp;
+        </body>
+    <script type="text/javascript">
+        function add(){
+            window.location.href='http://localhost:8080/add'
+        }
+        function search(){
+            window.location.href='http://localhost:8080/search'
+        }
+        function accounting(){
+            window.location.href='http://localhost:8080/accounting'
+        }
+    </script>
+    </form>
+</html>

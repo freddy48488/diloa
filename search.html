@@ -1,0 +1,25 @@
+<html>
+    <style type="text/css">
+        p{
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+        input[type=text]{
+            border-style: double ;
+            inline-size: 5cm;
+        }
+    </style>
+    <body style="background-color: rgb(14, 0, 65);">
+        <script type="text/javascript">
+            function goback(){
+                window.location.href = 'http://localhost:8080/'
+            }
+        </script>
+        <form action="/search" method="POST">
+            <p>搜尋</p>
+            <p>搜尋: <input type="text" name="cardsnum" id="cardsnum" placeholder="卡號"></p>
+            <input type="button" onclick="goback()" value="回到功能選擇">
+        </form>
+    </body>
+</html>

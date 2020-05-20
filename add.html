@@ -1,0 +1,36 @@
+<html>
+    <body style="background-color: rgb(14, 0, 65);">
+        <style type="text/css">
+            p{
+                font-size: 20px;
+                font-weight: bold;
+                color:gainsboro ;
+            }
+            input[type=text]{
+                inline-size: 5cm;
+                border-style: solid;
+            }
+        </style>
+        <script type="text/javascript">
+            function goback(){
+                window.location.href ='http://localhost:8080/'
+            }
+        </script>
+        <p>新增資料/更新資料</p>
+        <form action="/add" method="POST">
+            <p>名稱: <input type="text" name = "username" id="username" placeholder="名稱"></p>
+            <p>卡號: <input type="text" name = "cardsnum" id="cardsnum" placeholder="卡號"></p>
+            <p>拿卡日期(月/日/年): <input type="text" name="takedate" id="takedate" placeholder="拿卡日期"></p>
+            <p>開卡日期(月/日/年): <input type="text" name="dateactive" id="dateactive" placeholder="開卡日期"></p>
+            <p>方案: <input type="text" name="plan" id="plan" placeholder="方案"></p>
+            <p>賣價: <input type="text" name="price" id="price" placeholder="賣價"></p>
+            <p>出入價: <input type="text" name="price1" id="price1" placeholder="出入價"></p>
+            <p>卡片成本: <input type="text" name="cost" id="cost" placeholder="卡片成本"></p>
+            <p>付款日期(月/日/年): <input type="text" name="paydate" id="paydate" placeholder="付款日期"></p>
+            <p>付款金額: <input type="text" name="pay" id="pay" placeholder="付款金額"></p>
+            <p>是否繳錢: <input type="checkbox" checked="true" name="money" id="money"></p>
+            <button type="submit">完成</button>&nbsp;
+            <input type="button" onclick="goback()" value="回到功能選擇">
+        </form>
+    </body>
+</html>
